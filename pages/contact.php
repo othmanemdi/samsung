@@ -2,7 +2,7 @@
 
 ob_start();
 
-$title = "Contact page";
+$title = "Contact page page";
 
 $content_php = ob_get_clean();
 
@@ -15,7 +15,7 @@ ob_start(); ?>
 
 ob_start(); ?>
 
-<h1>Contact</h1>
+<h1>Contact page</h1>
 
 
 
