@@ -18,6 +18,10 @@
                     <a class="nav-link <?= $page === 'cart' ? 'text-warning fw-bold' : '' ?>" href="cart">Cart</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link <?= $page === 'contact' ? 'text-warning fw-bold' : '' ?>" href="contact">Contact</a>
+                </li>
+
             </ul>
             <ul class="navbar-nav d-flex">
                 <li class="nav-item">
