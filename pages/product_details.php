@@ -2,7 +2,7 @@
 
 ob_start();
 
-$title = "404 page";
+$title = "Product Details page";
 
 $content_php = ob_get_clean();
 
@@ -15,7 +15,7 @@ ob_start(); ?>
 
 ob_start(); ?>
 
-<h1>404</h1>
+<h1>Product Details page</h1>
 
 
 
