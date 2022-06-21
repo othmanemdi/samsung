@@ -55,8 +55,6 @@ echo $content_php ?? "";
 
     <div class="container mt-5">
         <?= $content_html ?? "" ?>
-
-
     </div>
 
     <?= $content_js ?? ""; ?>
