@@ -116,7 +116,7 @@ ob_start(); ?>
                 </li>
             </ul>
 
-            <a href="" class="btn btn-dark mt-3  rounded-pill">PROCED TO CHECKOUT</a>
+            <a href="proced_checkout" class="btn btn-dark mt-3  rounded-pill">PROCED TO CHECKOUT</a>
         </div>
     </div>
     <!-- col 3-->

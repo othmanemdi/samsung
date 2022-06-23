@@ -89,7 +89,7 @@ ob_start(); ?>
                 </h3>
             </div>
 
-            <a href="cart.html" class="btn btn-dark mt-2">
+            <a href="cart" class="btn btn-dark mt-2">
                 <i class="fas fa-shopping-cart"></i>
                 Ajouter au panier
             </a>
