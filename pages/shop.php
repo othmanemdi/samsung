@@ -64,7 +64,7 @@ ob_start(); ?>
                 <div class="col-lg-4 col-md-6 col-sm-6">
 
                     <div class="card mb-3">
-                        <a href="product_details">
+                        <a href="product_details&id=<?= $i ?>">
                             <img height="300" src="images/products/p<?= $i ?>.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">

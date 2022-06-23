@@ -4,6 +4,19 @@ ob_start();
 
 $title = "Product Details page";
 
+if (isset($_GET["id"])) {
+    $id = (int)$_GET["id"];
+} else {
+    header('Location: shop');
+    die();
+}
+
+if ($id === 0) {
+    header('Location: shop');
+    die();
+}
+
+
 $content_php = ob_get_clean();
 
 ob_start(); ?>
@@ -19,13 +32,13 @@ ob_start(); ?>
 
 <div class="row">
     <div class="col-md-6">
-        <img width="500" src="images/produits/0.jpg" alt="">
+        <img width="500" src="images/products/p<?= $id ?>.jpg" alt="">
     </div>
     <!-- col -->
 
     <div class="col-md-6">
         <h3>
-            CANAPÉ MARANELLO BORDEAUX 2 PLACES
+            Product N° <?= $id ?>
         </h3>
 
         <div class="text-warning">
