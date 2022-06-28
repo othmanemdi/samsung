@@ -12,7 +12,7 @@ if (isset($_POST['register_btn'])) {
     $nom = $_POST['nom'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $password_confirme = $_POST['password_confirme'];
+    $password_confirm = $_POST['password_confirm'];
 
     if (empty($prenom) or !preg_match('/^[a-zA-Z]+$/', $prenom) or strlen($prenom) < 3) {
         // $errors["prenom"] = "Votre prénome n'est pas valide";
