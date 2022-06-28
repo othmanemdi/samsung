@@ -20,13 +20,15 @@ ob_start(); ?>
 
         <div class="bg-light p-5 rounded-pilla rounded-3">
             <h3 class="text-center mb-4">
-                CRÉER UN NOUVEAU COMPTE CLIENT
+                SE CONNECTER
             </h3>
 
             <h5 class="text-center">
-                SE CONNECTER
+                Clients enregistrés
             </h5>
-
+            <p class="text-center">
+                Si vous avez un compte, connectez-vous avec votre adresse email.
+            </p>
 
             <form method="post">
 
