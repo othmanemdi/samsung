@@ -36,7 +36,6 @@ if (isset($_POST['register_btn'])) {
     }
 
 
-
     if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z]+$/', $_POST['nom'])) {
         $errors["nom"] = "Votre nom n'est pas valide";
         $nom_class_input = "is-invalid";
@@ -177,7 +176,7 @@ ob_start(); ?>
                         Créer un compte
                     </button>
 
-                    <a href="home" class="btn btn-secondary">
+                    <a href="login" class="btn btn-secondary">
                         Retour
                     </a>
 

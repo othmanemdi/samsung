@@ -11,7 +11,9 @@ $pages = scandir('pages/');
 
 $page_file = $page . ".php";
 
+require_once "database/db.php";
 
+require_once "helpers/functions.php";
 if (in_array($page_file, $pages)) {
     require_once 'pages/' . $page_file;
     // echo "Ok ";
@@ -33,9 +35,7 @@ if (in_array($page_file, $pages)) {
 // echo $content_js;
 // die();
 
-require_once "database/db.php";
 
-require_once "helpers/functions.php";
 
 
 echo $content_php ?? "";

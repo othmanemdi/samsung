@@ -17,7 +17,9 @@ ob_start(); ?>
 
 <h1>Contact page</h1>
 
-
+<p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis distinctio debitis explicabo iure quo beatae fugiat voluptatibus velit adipisci. Nobis, exercitationem! Quo distinctio doloribus sed eligendi repellendus provident aspernatur nisi!
+</p>
 
 <?php $content_html = ob_get_clean();
 
