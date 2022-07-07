@@ -14,6 +14,13 @@ $page_file = $page . ".php";
 require_once "database/db.php";
 
 require_once "helpers/functions.php";
+
+// dd($pdo);
+
+
+
+
+
 if (in_array($page_file, $pages)) {
     require_once 'pages/' . $page_file;
     // echo "Ok ";
