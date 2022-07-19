@@ -55,7 +55,7 @@ ob_start(); ?>
                     </td>
                     <td>
                         <a href="" class="btn btn-dark btn-sm">Update</a>
-                        <a href="" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="user_delete&id=<?= $u->id ?>" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             <?php endforeach ?>

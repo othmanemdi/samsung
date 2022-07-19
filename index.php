@@ -1,4 +1,8 @@
 <?php
+// echo "<pre>";
+// print_r($_GET);
+// echo "</pre>";
+// exit();
 
 if (isset($_GET['page']) && preg_match("/^[a-zA-Z0-9_-]*$/", $_GET['page'])) {
     $page = htmlspecialchars(trim($_GET['page']));

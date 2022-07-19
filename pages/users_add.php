@@ -4,7 +4,6 @@ ob_start();
 
 $title = "Add User";
 
-
 $errors = [];
 
 if (isset($_POST['add_user_btn'])) {
@@ -12,7 +11,6 @@ if (isset($_POST['add_user_btn'])) {
     // echo "<pre>";
     // print_r($_POST);
     // echo "</pre>";
-
     // exit();
 
     $prenom = $_POST['prenom'];
@@ -40,7 +38,6 @@ if (isset($_POST['add_user_btn'])) {
         $prenom_class_input = "is-valid";
         $prenom_class_feedback = "valid-feedback";
     }
-
 
     if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z ]+$/', $_POST['nom'])) {
         $errors["nom"] = "Votre nom n'est pas valide";
@@ -90,10 +87,6 @@ if (isset($_POST['add_user_btn'])) {
         header('Location: users');
         exit();
     }
-
-
-
-
 
     // echo "<pre>";
     // print_r($_POST);
@@ -180,7 +173,7 @@ ob_start(); ?>
                 Ajouter un utilisateur
             </button>
 
-            <a href="login" class="btn btn-secondary">
+            <a href="users" class="btn btn-secondary">
                 Retour
             </a>
 

@@ -22,6 +22,10 @@
                     <a class="nav-link <?= $page === 'contact' ? 'text-warning fw-bold' : '' ?>" href="contact">Contact</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link <?= $page === 'users' ? 'text-warning fw-bold' : '' ?>" href="users">Users</a>
+                </li>
+
             </ul>
             <ul class="navbar-nav d-flex">
                 <li class="nav-item">
