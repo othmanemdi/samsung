@@ -3,7 +3,7 @@
 ob_start();
 
 $title = "Users page";
-
+// select nom AS last_name,prenom AS first_name from users
 $users = $pdo->query("SELECT * FROM users ORDER BY id desc")->fetchAll();
 
 $content_php = ob_get_clean();
@@ -19,7 +19,7 @@ ob_start(); ?>
 
 <h1>List of users</h1>
 
-<a href="" class="btn btn-primary mb-3">Add</a>
+<a href="users_add" class="btn btn-primary mb-3">Add</a>
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover table-sm">
