@@ -24,7 +24,8 @@ if (!$user) {
 
 
 if (isset($_POST['user_delete_btn'])) {
-    $pdo->query("DELETE FROM users WHERE id = $id ");
+    // $pdo->query("DELETE FROM users WHERE id = $id ");
+    $pdo->query("UPDATE users SET is_active = 0 WHERE id = $id ");
     header('Location: users');
     exit();
 }

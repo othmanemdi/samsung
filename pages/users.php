@@ -4,7 +4,7 @@ ob_start();
 
 $title = "Users page";
 // select nom AS last_name,prenom AS first_name from users
-$users = $pdo->query("SELECT * FROM users ORDER BY id desc")->fetchAll();
+$users = $pdo->query("SELECT * FROM users WHERE is_active = 1 ORDER BY id desc")->fetchAll();
 
 $content_php = ob_get_clean();
 
@@ -54,7 +54,7 @@ ob_start(); ?>
                         <?= $u->email ?>
                     </td>
                     <td>
-                        <a href="" class="btn btn-dark btn-sm">Update</a>
+                        <a href="user_update&id=<?= $u->id ?>" class="btn btn-dark btn-sm">Update</a>
                         <a href="user_delete&id=<?= $u->id ?>" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
