@@ -19,6 +19,13 @@ ob_start(); ?>
 
 <h1>List of users</h1>
 
+<?php if (isset($_GET['message_text']) && isset($_GET['message_color'])) : ?>
+    <div class="alert alert-<?= $_GET['message_color'] ?>">
+        <?= $_GET['message_text'] ?>
+    </div>
+
+<?php endif ?>
+
 <a href="users_add" class="btn btn-primary mb-3">Add</a>
 
 <div class="table-responsive">

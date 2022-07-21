@@ -18,6 +18,11 @@ if (isset($_POST['add_user_btn'])) {
     $email = $_POST['email'];
     $date_naissance = $_POST['date_naissance'];
 
+    $req = $pdo->prepare('SELECT id FROM users WHERE email = ? LIMIT 1');
+    $req->execute([$email]);
+
+    $check_user_email = $req->fetch();
+
     if (empty($prenom) or !preg_match('/^[a-zA-Z ]+$/', $prenom) or strlen($prenom) < 3) {
         // $errors["prenom"] = "Votre prénome n'est pas valide";
         $errors["prenom"] = "";
@@ -57,6 +62,18 @@ if (isset($_POST['add_user_btn'])) {
         $email_class_feedback = "valid-feedback";
     }
 
+    if ($check_user_email) {
+        $errors['email'] = "Cet email est déja existant";
+        $email_class_input = "is-invalid";
+        $email_class_feedback = "invalid-feedback";
+    } else {
+        $email_class_input = "is-valid";
+        $email_class_feedback = "valid-feedback";
+    }
+
+
+
+
 
     if (empty($_POST['date_naissance'])) {
         $errors["date_naissance"] = "Votre date de naissance n'est pas valide";
@@ -84,7 +101,7 @@ if (isset($_POST['add_user_btn'])) {
                 'date_naissance' => $date_naissance
             ]
         );
-        header('Location: users');
+        header("Location: users&message_text=Bien enregistre&message_color=success");
         exit();
     }
 

@@ -6,14 +6,14 @@ $title = "User Update";
 
 
 if (!isset($_GET['id'])) {
-    header('Location: users');
+    header("Location: users&message_text=Id introuvable&message_color=danger");
     exit();
 }
 
 $id = (int)$_GET['id'];
 
 if ($id === 0) {
-    header('Location: users');
+    header("Location: users&message_text=Id introuvable&message_color=danger");
     exit();
 }
 
@@ -32,7 +32,6 @@ if (isset($_POST['update_user_btn'])) {
     $nom = $_POST['nom'];
     $email = $_POST['email'];
     $date_naissance = $_POST['date_naissance'];
-
     if (empty($prenom) or !preg_match('/^[a-zA-Z ]+$/', $prenom) or strlen($prenom) < 3) {
         // $errors["prenom"] = "Votre prénome n'est pas valide";
         $errors["prenom"] = "";
@@ -99,7 +98,8 @@ if (isset($_POST['update_user_btn'])) {
                 'id' => $id
             ]
         );
-        header('Location: users');
+        // header('Location: users');
+        header("Location: users&message_text=Bien enregistre&message_color=success");
         exit();
     }
 
